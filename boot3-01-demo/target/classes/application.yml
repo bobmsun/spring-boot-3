@@ -1,0 +1,41 @@
+# 1. k: v       k v 之前是用空格区分
+# 2. 属性有层级关系，使用下一行，空两个空格
+# 3.
+
+# server:
+#   port: 9999
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+
+person:
+  name: 张三
+  age: 18
+  birthday: 2010/10/10 12:12:12      # Date 一定得是这种 format  yyyy/MM/dd HH:mm:ss
+  like: true
+  child:
+    name: lisi
+    age: 20
+    birthday: 2018/10/10        # Date 也可以没有 时间
+    # text: ["abc", "def"]
+    text:       # List<String>
+      - abc
+      - def
+  dogs:
+    - name: xiaohei
+      age: 3
+    - name: xiaobai
+      age: 2
+  cats:
+    c1:
+      name: xiaolv      # 这里的 name 一定要换到 c1 的下一行，c1 是一个 key，这个 key 的值是一个对象
+      age: 3
+    c2: {name: xiaolv, age: 2}     # 如果k-v pair 的 value 是对象，对象也可用 {} 来表示
