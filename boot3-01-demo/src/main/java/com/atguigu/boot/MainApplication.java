@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Description 启动SpringBoot项目的主入口程序（class随便叫啥名都行）
  */
 
-@SpringBootApplication//(scanBasePackages = "com.atguigu")    // 这个注解告诉程序：这是一个 SpringBoot 应用
+@SpringBootApplication    //(scanBasePackages = "com.atguigu")    // 这个注解告诉程序：这是一个 SpringBoot 应用
 //@SpringBootConfiguration
 //@EnableAutoConfiguration
 //@ComponentScan("com.atguigu")
