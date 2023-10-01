@@ -7,7 +7,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Boot306DemoRedisApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Boot306DemoRedisApplication.class, args);
+
+        var ioc = SpringApplication.run(Boot306DemoRedisApplication.class, args);
+
+        String[] list = ioc.getBeanDefinitionNames();
+        for (String name : list) {
+            System.out.println(name);
+        }
     }
 
 }

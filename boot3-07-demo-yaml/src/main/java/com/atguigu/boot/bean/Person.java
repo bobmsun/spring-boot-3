@@ -13,7 +13,7 @@ import java.util.Map;
 @Component
 @ConfigurationProperties(prefix = "person")      // 将这个 java bean 和配置文件的 person 前缀进行了绑定
                                                 // Dog, Cat, Child 就不用绑配置文件了，因为它们是 person 里边嵌套的
-@Data      // 来自 lombok，自动生成 JavaBean属性的 getter / setter
+@Data      // 来自 lombok，自动生成 JavaBean属性的 getter / setter  和 toString method
 @NoArgsConstructor      // 自动生成一个无参构造器
 @AllArgsConstructor     // 自动生成一个全参构造器
 public class Person {
